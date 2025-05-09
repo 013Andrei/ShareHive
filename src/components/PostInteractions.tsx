@@ -2,7 +2,7 @@ import Image from "./Image";
 
 const PostInteractions = () => {
   return (
-    <div className="flex items-center justify-between gap-12 my-2 text-textGray">
+    <div className="flex items-center justify-between gap-4 lg:gap-16 my-2 text-textGray">
       <div className="flex items-center justify-between flex-1">
            {/* LIKES */}
         <div className="flex items-center gap-2 cursor-pointer group">
