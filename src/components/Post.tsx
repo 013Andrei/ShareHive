@@ -4,7 +4,7 @@ import PostInteractions from "./PostInteractions";
 
 const Post = () => {
   return (
-    <div className="p-4 border-y-[1px] border-borderGray">
+    <div className="p-4 border-y-[1px] border-yellow-500">
       <div className="flex items-center gap-2 text-sm text-yellow-400 mb-2 font-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"

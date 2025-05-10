@@ -18,6 +18,7 @@ export default {
       },
       colors: {
         textGray: "#71767B",
+        textYellow: "#FACC15",
         textYellowLight: "#FCF259",
         textGrayLight: "#E7E9EA",
         borderGray: "#2f3336",
