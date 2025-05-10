@@ -11,7 +11,10 @@ type ImageType = {
   tr?: boolean;
 };
 
-const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+const urlEndpoint = process.env.NEXT_PUBLIC_IMAGEKIT_URL;
+
+const baseUrl = process.env.NEXT_PUBLIC_IMAGEKIT_URL;
+const imageUrl = `${baseUrl}/sample-user-1.jpg`;
 
 if (!urlEndpoint) {
   throw new Error('Error: Please add urlEndpoint to .env or .env.local')
