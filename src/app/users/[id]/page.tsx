@@ -57,7 +57,7 @@ export default function UserProfilePage() {
   } = useQuery({
     queryKey: ["user", id],
     queryFn: () => fetchUser(id as string),
-    enabled: !!id, // wait for `id` to exist
+    enabled: !!id,
   });
 
   const {
@@ -72,13 +72,20 @@ export default function UserProfilePage() {
 
   if (userLoading || postLoading) return <p>Loading profile...</p>;
   if (userError || postError) return <p>Error loading user profile</p>;
-  if (!user || !posts) return <p>No data found</p>; // <— prevent undefined crash
+  if (!user || !posts) return <p>No data found</p>;
 
   return (
     <div>
       <h1 className="text-2xl font-bold mb-2">
         {user.name} (@{user.username})
       </h1>
+      <div className="w-24 h-24 relative rounded-full overflow-hidden mb-4">
+        <img
+          src={`/general/avatar${(user.id % 5) + 1}.png`}
+          alt={`${user.name} Avatar`}
+          className="object-cover w-full h-full"
+        />
+      </div>
       <p>Email: {user.email}</p>
       <p>Phone: {user.phone}</p>
       <p>Website: {user.website}</p>
@@ -87,7 +94,6 @@ export default function UserProfilePage() {
         Address: {user.address.street}, {user.address.city}
       </p>
 
-      {/* Placeholder for Mapbox */}
       <div className="mt-6">
         <h2 className="text-xl font-semibold mb-2">Google Map</h2>
         <iframe
