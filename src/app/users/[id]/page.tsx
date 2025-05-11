@@ -80,11 +80,6 @@ export default function UserProfilePage() {
         {user.name} (@{user.username})
       </h1>
       <div className="w-24 h-24 relative rounded-full overflow-hidden mb-4">
-        <img
-          src={`/general/avatar${(user.id % 5) + 1}.png`}
-          alt={`${user.name} Avatar`}
-          className="object-cover w-full h-full"
-        />
       </div>
       <p>Email: {user.email}</p>
       <p>Phone: {user.phone}</p>
