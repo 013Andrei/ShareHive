@@ -33,7 +33,7 @@ export default function UsersPage() {
             <p className="text-sm text-gray-500">@{user.username}</p>
             <a
               href={`/users/${user.id}`}
-              className="text-blue-600 hover:underline text-sm"
+              className="text-yellow-400 hover:underline text-sm"
             >
               View Profile
             </a>

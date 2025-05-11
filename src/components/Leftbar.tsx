@@ -29,7 +29,7 @@ const menuList = [
   {
     id: 5,
     name: "Bookmarks",
-    link: "/",
+    link: "/posts",
     icon: "bookmark.svg",
   },
   {
@@ -62,7 +62,10 @@ const Leftbar = () => {
   return (
     <div className="h-screen sticky top-0 flex flex-col justify-between pt-2 pb-8">
       <div className="flex flex-col gap-4 text-lg items-center xxl:items-start">
-        <Link href="/" className="p-2 rounded-full border-transparent hover:bg-yellow-200">
+        <Link
+          href="/"
+          className="p-2 rounded-full border-transparent hover:bg-yellow-200"
+        >
           <Image src="/icons/logo.svg" alt="logo" width={24} height={24} />
         </Link>
         <div className="flex flex-col">
@@ -78,14 +81,22 @@ const Leftbar = () => {
                 width={24}
                 height={24}
               />
-              <span className="hidden xxl:inline hover:font-bold">{item.name}</span>
+              <span className="hidden xxl:inline hover:font-bold">
+                {item.name}
+              </span>
             </Link>
           ))}
         </div>
-        <Link href="/" className=" bg-yellow-400 text-white rounded-full w-12 h-12 flex items-center justify-center xxl:hidden">
+        <Link
+          href="/"
+          className=" bg-yellow-400 text-white rounded-full w-12 h-12 flex items-center justify-center xxl:hidden"
+        >
           <Image src="/icons/post.svg" alt="new post" width={24} height={24} />
         </Link>
-        <Link href="/" className="hidden xxl:block bg-yellow-300 text-black hover:text-white rounded-full font-bold py-2 px-20">
+        <Link
+          href="/"
+          className="hidden xxl:block bg-yellow-300 text-black hover:text-white rounded-full font-bold py-2 px-20"
+        >
           Post
         </Link>
       </div>

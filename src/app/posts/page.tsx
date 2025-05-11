@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useQuery } from '@tanstack/react-query';
-import { fetchPosts } from '../lib/fetchPosts';
+import { useQuery } from "@tanstack/react-query";
+import { fetchPosts } from "../lib/fetchPosts";
 
 type Post = {
   id: number;
@@ -11,13 +11,13 @@ type Post = {
 
 export default function PostsPage() {
   const { data, error, isLoading } = useQuery<Post[]>({
-    queryKey: ['posts'],
+    queryKey: ["posts"],
     queryFn: fetchPosts,
   });
 
   if (isLoading) return <p>Loading...</p>;
   if (error) {
-    console.error('Error fetching posts:', error);
+    console.error("Error fetching posts:", error);
     return <p>Error loading posts</p>;
   }
 
@@ -27,7 +27,12 @@ export default function PostsPage() {
       <ul className="space-y-4">
         {data?.map((post) => (
           <li key={post.id} className="border p-4 rounded">
-            <strong>{post.title}</strong>
+            <a
+              href={`/posts/${post.id}`}
+              className="text-yellow-400 hover:underline"
+            >
+              {post.title}
+            </a>
             <p>{post.body}</p>
           </li>
         ))}
