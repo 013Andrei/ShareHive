@@ -11,9 +11,11 @@
   "dependencies": {
     "@imagekit/next": "^2.1.0",
     "@tanstack/react-query": "^5.75.5",
+    "apexcharts": "^4.7.0",
     "imagekitio-next": "^1.0.1",
     "next": "15.1.0",
     "react": "^19.0.0",
+    "react-apexcharts": "^1.7.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

@@ -40,8 +40,8 @@ const menuList = [
   },
   {
     id: 7,
-    name: "Communities",
-    link: "/",
+    name: "Community",
+    link: "./users",
     icon: "community.svg",
   },
   {
@@ -53,7 +53,7 @@ const menuList = [
   {
     id: 10,
     name: "More",
-    link: "/",
+    link: "./dashboard",
     icon: "more.svg",
   },
 ];
@@ -91,8 +91,8 @@ const Leftbar = () => {
                 <Image src="/general/avatar.png" alt="John Snow" fill/>
             </div>
             <div className="hidden xxl:flex flex-col">
-                <span className="font-bold">John Snow</span>
-                <span className="text-sm text-textGray">@JohnSnow</span>
+                <span className="font-bold">User</span>
+                <span className="text-sm text-textGray">@User</span>
             </div>
         </div>
         <div className="hidden xxl:block cursor-pointer font-bold">...</div>
