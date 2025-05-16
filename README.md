@@ -10,6 +10,7 @@ This project is a dynamic, responsive web application built with **Next.js**, **
 
  **Deployed on Vercel**: https://sharehive-eta.vercel.app/
  **Github link**: https://github.com/013Andrei/Sharehive.git
+ **Video Presentation**: https://drive.google.com/drive/folders/1XYFkOX0G0BfU9azC0qmYETmkxNpuMipR?usp=drive_link
 ---
 
 ## Technologies Used
